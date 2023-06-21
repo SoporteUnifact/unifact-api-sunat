@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace App\Services\FacturacionElectronica\Core\Models\Sales;
 
 use DateTimeInterface;
+use App\Services\FacturacionElectronica\Core\Models\Sales\EmbededDespatch;
 use App\Services\FacturacionElectronica\Core\Models\Customer\Customer;
 use App\Services\FacturacionElectronica\Core\Models\Company\Address;
 /**

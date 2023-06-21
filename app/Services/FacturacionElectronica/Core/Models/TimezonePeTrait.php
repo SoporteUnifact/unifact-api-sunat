@@ -8,6 +8,7 @@ use DateTime;
 use DateTimeImmutable;
 use DateTimeInterface;
 use DateTimeZone;
+use App\Services\FacturacionElectronica\Core\Models\TimeZonePe;
 
 trait TimezonePeTrait
 {

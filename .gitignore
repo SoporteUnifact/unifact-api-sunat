@@ -3,6 +3,7 @@
 /public/storage
 /storage/*.key
 
+composer.lock
 Homestead.json
 Homestead.yaml
 .env

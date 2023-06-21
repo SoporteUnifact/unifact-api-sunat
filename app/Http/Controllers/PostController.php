@@ -16,6 +16,6 @@ class PostController extends Controller
     public function index(Request $request)
     {
         $invoice = new InvoiceDocument($request);
-        return $invoice->getCustomer()->getTipoDoc();
+        return $invoice->getLegend()->getValue();
     }
 }
