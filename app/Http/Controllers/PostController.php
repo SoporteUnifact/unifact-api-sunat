@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Invoices\Invoice;
+use App\Services\FacturacionElectronica\Invoices\InvoiceDocument;
 
 class PostController extends Controller
 {
@@ -15,7 +15,7 @@ class PostController extends Controller
 
     public function index(Request $request)
     {
-        $invoice = new Invoice($request);
-        return $invoice->getCustomer()->getAddress()->getDireccion();
+        $invoice = new InvoiceDocument($request);
+        return $invoice->getCustomer()->getTipoDoc();
     }
 }

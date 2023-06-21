@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 require_once __DIR__.'/../vendor/autoload.php';
 
@@ -7,6 +8,7 @@ require_once __DIR__.'/../vendor/autoload.php';
 ))->bootstrap();
 
 date_default_timezone_set(env('APP_TIMEZONE', 'Amerilca/Lima'));
+
 
 /*
 |--------------------------------------------------------------------------

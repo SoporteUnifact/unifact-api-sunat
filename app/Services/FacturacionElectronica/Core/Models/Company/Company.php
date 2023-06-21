@@ -1,23 +1,27 @@
 <?php
-namespace App\Models;
-use App\Models\Address;
+declare(strict_types=1);
 
-class Customer
+namespace App\Services\FacturacionElectronica\Core\Models\Company;
+
+/**
+ * Class Company.
+ */
+class Company
 {
     /**
      * @var string|null
      */
-    private $tipoDoc;
+    private $ruc;
 
     /**
      * @var string|null
      */
-    private $numDoc;
+    private $razonSocial;
 
     /**
      * @var string|null
      */
-    private $rznSocial;
+    private $nombreComercial;
 
     /**
      * @var Address|null
@@ -37,19 +41,19 @@ class Customer
     /**
      * @return string|null
      */
-    public function getTipoDoc(): ?string
+    public function getRuc(): ?string
     {
-        return $this->tipoDoc;
+        return $this->ruc;
     }
 
     /**
-     * @param string|null $tipoDoc
+     * @param string|null $ruc
      *
-     * @return Customer
+     * @return Company
      */
-    public function setTipoDoc(?string $tipoDoc): Customer
+    public function setRuc(?string $ruc): Company
     {
-        $this->tipoDoc = $tipoDoc;
+        $this->ruc = $ruc;
 
         return $this;
     }
@@ -57,19 +61,19 @@ class Customer
     /**
      * @return string|null
      */
-    public function getNumDoc(): ?string
+    public function getRazonSocial(): ?string
     {
-        return $this->numDoc;
+        return $this->razonSocial;
     }
 
     /**
-     * @param string|null $numDoc
+     * @param string|null $razonSocial
      *
-     * @return Customer
+     * @return Company
      */
-    public function setNumDoc(?string $numDoc): Customer
+    public function setRazonSocial(?string $razonSocial): Company
     {
-        $this->numDoc = $numDoc;
+        $this->razonSocial = $razonSocial;
 
         return $this;
     }
@@ -77,19 +81,19 @@ class Customer
     /**
      * @return string|null
      */
-    public function getRznSocial(): ?string
+    public function getNombreComercial(): ?string
     {
-        return $this->rznSocial;
+        return $this->nombreComercial;
     }
 
     /**
-     * @param string|null $rznSocial
+     * @param string|null $nombreComercial
      *
-     * @return Customer
+     * @return Company
      */
-    public function setRznSocial(?string $rznSocial): Customer
+    public function setNombreComercial(?string $nombreComercial): Company
     {
-        $this->rznSocial = $rznSocial;
+        $this->nombreComercial = $nombreComercial;
 
         return $this;
     }
@@ -105,9 +109,9 @@ class Customer
     /**
      * @param Address|null $address
      *
-     * @return Customer
+     * @return Company
      */
-    public function setAddress(?Address $address): Customer
+    public function setAddress(?Address $address): Company
     {
         $this->address = $address;
 
@@ -125,9 +129,9 @@ class Customer
     /**
      * @param string|null $email
      *
-     * @return Customer
+     * @return Company
      */
-    public function setEmail(?string $email): Customer
+    public function setEmail(?string $email): Company
     {
         $this->email = $email;
 
@@ -145,9 +149,9 @@ class Customer
     /**
      * @param string|null $telephone
      *
-     * @return Customer
+     * @return Company
      */
-    public function setTelephone(?string $telephone): Customer
+    public function setTelephone(?string $telephone): Company
     {
         $this->telephone = $telephone;
 
